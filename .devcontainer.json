@@ -1,12 +1,8 @@
 {
   "name": "containers",
-  "image": "mcr.microsoft.com/devcontainers/base:alpine",
+  "image": "ghcr.io/nikaro/alpine-devcontainer:latest",
   "customizations": {
     "vscode": {
-      "settings": {
-        "terminal.integrated.defaultProfile.linux": "fish",
-        "terminal.integrated.defaultProfile.osx": "fish"
-      },
       "extensions": [
         "EditorConfig.EditorConfig",
         "GitHub.copilot"
@@ -15,8 +11,8 @@
   },
   "features": {
     "ghcr.io/nikaro/features/actionlint": {},
-    "ghcr.io/nikaro/features/dind": {},
-    "ghcr.io/nikaro/features/github-cli": {}
+    "ghcr.io/nikaro/features/github-cli": {},
+    "ghcr.io/nikaro/features/hadolint": {}
   },
   "mounts": [
     {
