@@ -2,6 +2,7 @@ FROM alpine:3.18.2
 
 RUN \
   apk add --no-cache \
+    build-base=0.5-r3 \
     curl=8.1.2-r0 \
     doas=6.8.2-r4 \
     fish=3.6.1-r2 \
