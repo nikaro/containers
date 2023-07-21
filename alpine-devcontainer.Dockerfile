@@ -3,7 +3,7 @@ FROM alpine:3.18.2
 # renovate: datasource=repology depName=alpine_3_18/build-base versioning=loose
 ENV BUILD_BASE_VERSION="0.5-r3"
 # renovate: datasource=repology depName=alpine_3_18/curl versioning=loose
-ENV CURL_VERSION="8.1.2-r0"
+ENV CURL_VERSION="8.2.0-r1"
 # renovate: datasource=repology depName=alpine_3_18/doas versioning=loose
 ENV DOAS_VERSION="6.8.2-r4"
 # renovate: datasource=repology depName=alpine_3_18/fd versioning=loose
@@ -19,7 +19,7 @@ ENV LAZYGIT_VERSION="0.38.2-r0"
 # renovate: datasource=repology depName=alpine_3_18/neovim versioning=loose
 ENV NEOVIM_VERSION="0.9.0-r2"
 # renovate: datasource=repology depName=alpine_3_18/openssh versioning=loose
-ENV OPENSSH_CLIENT_VERSION="9.3_p1-r3"
+ENV OPENSSH_CLIENT_VERSION="9.3_p2-r0"
 # renovate: datasource=repology depName=alpine_3_18/py3-pynvim versioning=loose
 ENV PY_PYNVIM_VERSION="0.4.3-r6"
 # renovate: datasource=repology depName=alpine_3_18/ripgrep versioning=loose
