@@ -1,6 +1,4 @@
 {
-  "name": "containers",
-  "image": "ghcr.io/nikaro/alpine-devcontainer:latest",
   "customizations": {
     "vscode": {
       "extensions": [
@@ -14,6 +12,7 @@
     "ghcr.io/nikaro/features/github-cli": {},
     "ghcr.io/nikaro/features/hadolint": {}
   },
+  "image": "rg.fr-par.scw.cloud/devc/alpine:latest",
   "mounts": [
     {
       "source": "${localEnv:HOME}/.config/fish",
@@ -35,5 +34,6 @@
       "target": "/home/vscode/.ssh",
       "type": "bind"
     }
-  ]
+  ],
+  "name": "containers"
 }

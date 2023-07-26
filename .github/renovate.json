@@ -4,6 +4,20 @@
     "config:recommended",
     "helpers:pinGitHubActionDigests"
   ],
+  "packageRules": [
+    {
+      "automerge": true,
+      "groupName": "alpine packages",
+      "groupSlug": "alpine",
+      "matchDatasources": [
+        "repology"
+      ],
+      "matchPackagePatterns": [
+        "^alpine_3_18/"
+      ],
+      "separateMajorMinor": false
+    }
+  ],
   "regexManagers": [
     {
       "fileMatch": [
@@ -13,20 +27,6 @@
         "#\\s*renovate:\\s*datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\sENV .*?_VERSION=\"(?<currentValue>.*)\"\\s"
       ],
       "versioningTemplate": "{{#if versioning}}{{versioning}}{{else}}semver{{/if}}"
-    }
-  ],
-  "packageRules": [
-    {
-      "automerge": true,
-      "matchDatasources": [
-        "repology"
-      ],
-      "matchPackagePatterns": [
-        "^alpine_3_18/"
-      ],
-      "separateMajorMinor": false,
-      "groupName": "alpine packages",
-      "groupSlug": "alpine"
     }
   ]
 }
