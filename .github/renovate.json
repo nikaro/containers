@@ -17,6 +17,7 @@
   ],
   "packageRules": [
     {
+      "automerge": true,
       "matchDatasources": [
         "repology"
       ],
