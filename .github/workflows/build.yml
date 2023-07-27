@@ -31,13 +31,13 @@ jobs:
             registry:
               host: rg.fr-par.scw.cloud
               username: nologin
-              password: ${{ secrets.SCW_SECRET_KEY }}
+              password: SCW_SECRET_KEY
           - file: alpine-devcontainer
             name: ${{ github.repository_owner }}/alpine-devcontainer
             registry:
               host: ghcr.io
-              username: ${{ github.repository_owner }}
-              password: ${{ secrets.GITHUB_TOKEN }}
+              username: nikaro
+              password: GITHUB_TOKEN
     steps:
 
       - name: Checkout repository
@@ -67,7 +67,7 @@ jobs:
         with:
           registry: ${{ matrix.image.registry.host }}
           username: ${{ matrix.image.registry.username }}
-          password: ${{ matrix.image.registry.password }}
+          password: ${{ secrets[matrix.image.registry.password] }}
 
       - name: Build and push
         uses: docker/build-push-action@2eb1c1961a95fc15694676618e422e8ba1d63825 # v4.1.1
