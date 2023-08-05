@@ -15,7 +15,7 @@ ENV GIT_VERSION="2.40.1-r0"
 # renovate: datasource=repology depName=alpine_3_18/jq versioning=loose
 ENV JQ_VERSION="1.6-r3"
 # renovate: datasource=repology depName=alpine_3_18/lazygit versioning=loose
-ENV LAZYGIT_VERSION="0.38.2-r0"
+ENV LAZYGIT_VERSION="0.38.2-r1"
 # renovate: datasource=repology depName=alpine_3_18/neovim versioning=loose
 ENV NEOVIM_VERSION="0.9.0-r2"
 # renovate: datasource=repology depName=alpine_3_18/openssh versioning=loose
