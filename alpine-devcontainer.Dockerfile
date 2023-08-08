@@ -1,4 +1,4 @@
-FROM alpine:3.18.2
+FROM alpine:3.18.3
 
 # renovate: datasource=repology depName=alpine_3_18/build-base versioning=loose
 ENV BUILD_BASE_VERSION="0.5-r3"
