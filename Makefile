@@ -1,9 +1,14 @@
 registry ?= "rg.fr-par.scw.cloud/devc"
 tag ?= $(shell git rev-parse --short HEAD)
 
+.PHONY: all clean test login build push
+
 all: build
 
-lint:
+clean:
+	docker system prune --all --filter="label=org.opencontainers.image.url=https://github.com/nikaro/containers" --force
+
+test:
 	pre-commit run --all-files
 
 login:

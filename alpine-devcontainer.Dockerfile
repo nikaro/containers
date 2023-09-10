@@ -1,5 +1,9 @@
 FROM alpine:3.18.3
 
+LABEL org.opencontainers.image.authors="nikaro"
+LABEL org.opencontainers.image.url="https://github.com/nikaro/containers"
+LABEL org.opencontainers.image.title="alpine-devcontainer"
+
 # renovate: datasource=repology depName=alpine_3_18/build-base versioning=loose
 ENV BUILD_BASE_VERSION="0.5-r3"
 # renovate: datasource=repology depName=alpine_3_18/curl versioning=loose
