@@ -9,5 +9,6 @@
   "automerge": true,
   "pre-commit": {
     "enabled": true
-  }
+  },
+  "prHourlyLimit": 0
 }
