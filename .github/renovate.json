@@ -2,31 +2,12 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "config:recommended",
-    "helpers:pinGitHubActionDigests"
+    "helpers:pinGitHubActionDigests",
+    "regexManagers:dockerfileVersions",
+    "regexManagers:githubActionsVersions"
   ],
-  "packageRules": [
-    {
-      "automerge": true,
-      "groupName": "alpine packages",
-      "groupSlug": "alpine",
-      "matchDatasources": [
-        "repology"
-      ],
-      "matchPackagePatterns": [
-        "^alpine_3_18/"
-      ],
-      "separateMajorMinor": false
-    }
-  ],
-  "regexManagers": [
-    {
-      "fileMatch": [
-        "(^|/|\\.)Dockerfile$"
-      ],
-      "matchStrings": [
-        "#\\s*renovate:\\s*datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\sENV .*?_VERSION=\"(?<currentValue>.*)\"\\s"
-      ],
-      "versioningTemplate": "{{#if versioning}}{{versioning}}{{else}}semver{{/if}}"
-    }
-  ]
+  "automerge": true,
+  "pre-commit": {
+    "enabled": true
+  }
 }

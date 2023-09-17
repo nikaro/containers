@@ -5,18 +5,21 @@ on:
     branches: [main]
     paths:
       - .github/workflows/build.yml
-      - '*.Dockerfile'
+      - "*.Dockerfile"
   push:
     branches: [main]
     paths:
       - .github/workflows/build.yml
-      - '*.Dockerfile'
+      - "*.Dockerfile"
   schedule:
-    - cron: '0 0 * * 0'
+    - cron: "0 0 * * 0"
   workflow_dispatch:
 
-jobs:
+env:
+  # renovate: datasource=github-releases depName=hadolint/hadolint
+  HADOLINT_VERSION: v2.12.0
 
+jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
@@ -39,7 +42,6 @@ jobs:
               username: nikaro
               password: GITHUB_TOKEN
     steps:
-
       - name: Checkout repository
         uses: actions/checkout@3df4ab11eba7bda6032a0b82a6bb43b11571feac # v4.0.0
 
@@ -47,7 +49,7 @@ jobs:
         uses: jaxxstorm/action-install-gh-release@c5ead9a448b4660cf1e7866ee22e4dc56538031a # v1.10.0
         with:
           repo: hadolint/hadolint
-          tag: v2.12.0
+          tag: ${{ env.HADOLINT_VERSION }}
           cache: enable
           extension-matching: disable
           rename-to: hadolint
