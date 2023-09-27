@@ -1,14 +1,10 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:recommended",
-    "helpers:pinGitHubActionDigests",
-    "regexManagers:dockerfileVersions",
-    "regexManagers:githubActionsVersions"
-  ],
-  "automerge": true,
-  "pre-commit": {
-    "enabled": true
-  },
-  "prHourlyLimit": 0
+  "extends": ["github>nikaro/actions//.github/renovate_preset"],
+  "packageRules": [
+    {
+      "groupName": "alpine packages",
+      "matchPackagePatterns": ["^alpine_3_18/"]
+    }
+  ]
 }
