@@ -2,15 +2,8 @@ name: Build
 
 on:
   pull_request:
-    branches: [main]
-    paths:
-      - .github/workflows/build.yml
-      - "*.Dockerfile"
   push:
     branches: [main]
-    paths:
-      - .github/workflows/build.yml
-      - "*.Dockerfile"
   schedule:
     - cron: "0 0 * * 0"
   workflow_dispatch:
@@ -20,9 +13,32 @@ env:
   HADOLINT_VERSION: v2.12.0
 
 jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-22.04
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@8ade135a41bc03ea155e62e844d188df1ea18608 # v4.1.0
+
+      - name: Install hadolint
+        uses: jaxxstorm/action-install-gh-release@c5ead9a448b4660cf1e7866ee22e4dc56538031a # v1.10.0
+        with:
+          repo: hadolint/hadolint
+          tag: ${{ env.HADOLINT_VERSION }}
+          cache: enable
+          extension-matching: disable
+          rename-to: hadolint
+          chmod: 0755
+
+      - name: Run pre-commit hooks
+        uses: nikaro/actions/pre-commit@5c52b33aff988e477ab46908da5f5e6b81d1b5cd # v0.5.0
+
   build:
     name: Build
-    runs-on: ubuntu-latest
+    needs: [lint]
+    runs-on: ubuntu-22.04
     permissions:
       contents: read
       packages: write
@@ -45,19 +61,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@8ade135a41bc03ea155e62e844d188df1ea18608 # v4.1.0
 
-      - name: Install hadolint
-        uses: jaxxstorm/action-install-gh-release@c5ead9a448b4660cf1e7866ee22e4dc56538031a # v1.10.0
-        with:
-          repo: hadolint/hadolint
-          tag: ${{ env.HADOLINT_VERSION }}
-          cache: enable
-          extension-matching: disable
-          rename-to: hadolint
-          chmod: 0755
-
-      - name: Run pre-commit hooks
-        uses: pre-commit/action@646c83fcd040023954eafda54b4db0192ce70507 # v3.0.0
-
       - name: Setup QEMU
         uses: docker/setup-qemu-action@68827325e0b33c7199eb31dd4e31fbe9023e06e3 # v3.0.0
 
@@ -65,6 +68,7 @@ jobs:
         uses: docker/setup-buildx-action@f95db51fddba0c2d1ec667646a06c2ce06100226 # v3.0.0
 
       - name: Login to registry
+        if: github.ref_name == 'main'
         uses: docker/login-action@343f7c4344506bcbf9b4de18042ae17996df046d # v3.0.0
         with:
           registry: ${{ matrix.image.registry.host }}
