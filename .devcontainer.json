@@ -1,10 +1,7 @@
 {
   "customizations": {
     "vscode": {
-      "extensions": [
-        "EditorConfig.EditorConfig",
-        "GitHub.copilot"
-      ]
+      "extensions": ["EditorConfig.EditorConfig", "GitHub.copilot"]
     }
   },
   "features": {
