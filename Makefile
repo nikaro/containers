@@ -15,7 +15,8 @@ login:
 	docker login ${registry} -u nologin --password-stdin <<< "${SCW_SECRET_KEY}"
 
 build:
-	docker build --tag ${registry}/alpine:${tag} --tag ${registry}/alpine:latest --file ./alpine-devcontainer.Dockerfile .
+	# docker build --tag ${registry}/alpine:${tag} --tag ${registry}/alpine:latest --file ./alpine-devcontainer.Dockerfile .
+	docker build --tag ${registry}/alpine:${tag} --tag ${registry}/wait-for-it:latest --file ./wait-for-it.Dockerfile .
 
 push:
 	docker push --all-tags ${image}

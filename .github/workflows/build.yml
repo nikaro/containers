@@ -57,6 +57,12 @@ jobs:
               host: ghcr.io
               username: nikaro
               password: GITHUB_TOKEN
+          - file: wait-for-it
+            name: ${{ github.repository_owner }}/wait-for-it
+            registry:
+              host: ghcr.io
+              username: nikaro
+              password: GITHUB_TOKEN
     steps:
       - name: Checkout repository
         uses: actions/checkout@8ade135a41bc03ea155e62e844d188df1ea18608 # v4.1.0
