@@ -19,7 +19,7 @@ ENV GIT_VERSION="2.40.1-r0"
 # renovate: datasource=repology depName=alpine_3_18/helix versioning=loose
 ENV HELIX_VERSION="23.03-r2"
 # renovate: datasource=repology depName=alpine_3_18/jq versioning=loose
-ENV JQ_VERSION="1.6-r3"
+ENV JQ_VERSION="1.6-r4"
 # renovate: datasource=repology depName=alpine_3_18/openssh versioning=loose
 ENV OPENSSH_CLIENT_VERSION="9.3_p2-r0"
 # renovate: datasource=repology depName=alpine_3_18/ripgrep versioning=loose
