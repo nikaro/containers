@@ -4,25 +4,25 @@ LABEL org.opencontainers.image.authors="nikaro"
 LABEL org.opencontainers.image.url="https://github.com/nikaro/containers"
 LABEL org.opencontainers.image.title="alpine-devcontainer"
 
-# renovate: datasource=repology depName=alpine_3_18/build-base versioning=loose
+# renovate: datasource=repology depName=alpine_3_19/build-base versioning=loose
 ENV BUILD_BASE_VERSION="0.5-r3"
-# renovate: datasource=repology depName=alpine_3_18/curl versioning=loose
+# renovate: datasource=repology depName=alpine_3_19/curl versioning=loose
 ENV CURL_VERSION="8.5.0-r0"
-# renovate: datasource=repology depName=alpine_3_18/doas versioning=loose
+# renovate: datasource=repology depName=alpine_3_19/doas versioning=loose
 ENV DOAS_VERSION="6.8.2-r4"
-# renovate: datasource=repology depName=alpine_3_18/fd versioning=loose
+# renovate: datasource=repology depName=alpine_3_19/fd versioning=loose
 ENV FD_VERSION="8.7.0-r1"
-# renovate: datasource=repology depName=alpine_3_18/fish versioning=loose
+# renovate: datasource=repology depName=alpine_3_19/fish versioning=loose
 ENV FISH_VERSION="3.6.1-r2"
-# renovate: datasource=repology depName=alpine_3_18/git versioning=loose
+# renovate: datasource=repology depName=alpine_3_19/git versioning=loose
 ENV GIT_VERSION="2.40.1-r0"
-# renovate: datasource=repology depName=alpine_3_18/helix versioning=loose
+# renovate: datasource=repology depName=alpine_3_19/helix versioning=loose
 ENV HELIX_VERSION="23.03-r2"
-# renovate: datasource=repology depName=alpine_3_18/jq versioning=loose
+# renovate: datasource=repology depName=alpine_3_19/jq versioning=loose
 ENV JQ_VERSION="1.6-r4"
-# renovate: datasource=repology depName=alpine_3_18/openssh versioning=loose
+# renovate: datasource=repology depName=alpine_3_19/openssh versioning=loose
 ENV OPENSSH_CLIENT_VERSION="9.3_p2-r0"
-# renovate: datasource=repology depName=alpine_3_18/ripgrep versioning=loose
+# renovate: datasource=repology depName=alpine_3_19/ripgrep versioning=loose
 ENV RIPGREP_VERSION="13.0.0-r3"
 
 RUN \
