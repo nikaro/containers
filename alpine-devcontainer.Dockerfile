@@ -1,4 +1,4 @@
-FROM alpine:3.18.5
+FROM alpine:3.19.0
 
 LABEL org.opencontainers.image.authors="nikaro"
 LABEL org.opencontainers.image.url="https://github.com/nikaro/containers"
@@ -9,21 +9,21 @@ ENV BUILD_BASE_VERSION="0.5-r3"
 # renovate: datasource=repology depName=alpine_3_19/curl versioning=loose
 ENV CURL_VERSION="8.5.0-r0"
 # renovate: datasource=repology depName=alpine_3_19/doas versioning=loose
-ENV DOAS_VERSION="6.8.2-r4"
+ENV DOAS_VERSION="6.8.2-r6"
 # renovate: datasource=repology depName=alpine_3_19/fd versioning=loose
-ENV FD_VERSION="8.7.0-r1"
+ENV FD_VERSION="8.7.1-r0"
 # renovate: datasource=repology depName=alpine_3_19/fish versioning=loose
-ENV FISH_VERSION="3.6.1-r2"
+ENV FISH_VERSION="3.6.3-r0"
 # renovate: datasource=repology depName=alpine_3_19/git versioning=loose
-ENV GIT_VERSION="2.40.1-r0"
+ENV GIT_VERSION="2.43.0-r0"
 # renovate: datasource=repology depName=alpine_3_19/helix versioning=loose
-ENV HELIX_VERSION="23.03-r2"
+ENV HELIX_VERSION="23.10-r0"
 # renovate: datasource=repology depName=alpine_3_19/jq versioning=loose
-ENV JQ_VERSION="1.6-r4"
+ENV JQ_VERSION="1.7-r2"
 # renovate: datasource=repology depName=alpine_3_19/openssh versioning=loose
-ENV OPENSSH_CLIENT_VERSION="9.3_p2-r0"
+ENV OPENSSH_CLIENT_VERSION="9.5_p1-r0"
 # renovate: datasource=repology depName=alpine_3_19/ripgrep versioning=loose
-ENV RIPGREP_VERSION="13.0.0-r3"
+ENV RIPGREP_VERSION="14.0.3-r0"
 
 RUN \
   apk add --no-cache \
