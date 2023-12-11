@@ -4,7 +4,7 @@
   "packageRules": [
     {
       "groupName": "alpine packages",
-      "matchPackagePatterns": ["^alpine_3_18/"]
+      "matchFileNames": ["alpine-devcontainer.Dockerfile"]
     }
   ]
 }
