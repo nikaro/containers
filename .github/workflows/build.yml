@@ -46,12 +46,6 @@ jobs:
       matrix:
         image:
           - file: alpine-devcontainer
-            name: devc/alpine
-            registry:
-              host: rg.fr-par.scw.cloud
-              username: nologin
-              password: SCW_SECRET_KEY
-          - file: alpine-devcontainer
             name: ${{ github.repository_owner }}/alpine-devcontainer
             registry:
               host: ghcr.io
