@@ -1,4 +1,4 @@
-FROM debian:12.2-slim
+FROM python:3.11.7-slim-bookworm
 
 LABEL org.opencontainers.image.authors="nikaro"
 LABEL org.opencontainers.image.url="https://github.com/nikaro/containers"
