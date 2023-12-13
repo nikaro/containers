@@ -51,6 +51,12 @@ jobs:
               host: ghcr.io
               username: nikaro
               password: GITHUB_TOKEN
+          - file: pulumi-executor
+            name: ${{ github.repository_owner }}/pulumi-executor
+            registry:
+              host: ghcr.io
+              username: nikaro
+              password: GITHUB_TOKEN
           - file: wait-for-it
             name: ${{ github.repository_owner }}/wait-for-it
             registry:

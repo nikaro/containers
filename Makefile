@@ -1,4 +1,4 @@
-registry ?= "rg.fr-par.scw.cloud/devc"
+registry ?= "ghcr.io/nikaro"
 tag ?= $(shell git rev-parse --short HEAD)
 
 .PHONY: all clean test login build push
@@ -16,7 +16,8 @@ login:
 
 build:
 	# docker build --tag ${registry}/alpine:${tag} --tag ${registry}/alpine:latest --file ./alpine-devcontainer.Dockerfile .
-	docker build --tag ${registry}/alpine:${tag} --tag ${registry}/wait-for-it:latest --file ./wait-for-it.Dockerfile .
+	# docker build --tag ${registry}/wait-for-it:${tag} --tag ${registry}/wait-for-it:latest --file ./wait-for-it.Dockerfile .
+	docker build --tag ${registry}/pulumi-executor:${tag} --tag ${registry}/pulumi-executor:latest --file ./pulumi-executor.Dockerfile .
 
 push:
 	docker push --all-tags ${image}
