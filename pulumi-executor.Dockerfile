@@ -15,6 +15,7 @@ ENV GIT_VERSION="1:2.39.2-1.1"
 # renovate: datasource=pypi depName=pulumi
 ENV PULUMI_VERSION="3.96.2"
 # renovate: datasource=github-releases depName=sops packageName=getsops/sops
+ENV SOPS_VERSION="3.8.1"
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 RUN \
@@ -29,10 +30,10 @@ RUN \
     && \
   rm -rf /var/lib/apt/lists/* && \
   # install pulumi
-  curl -fsSL https://get.pulumi.com/ | bash -s -- --version "$PULUMI_VERSION" && \
+  curl -fsSL https://get.pulumi.com/ | bash -s -- --version "${PULUMI_VERSION}" && \
   mv ~/.pulumi/bin/* /usr/bin && \
   # install sops
-  curl -sSLo /usr/bin/sops "https://github.com/getsops/sops/releases/download/v$SOPS_VERSION/sops-v$SOPS_VERSION.linux.amd64" && \
+  curl -sSLo /usr/bin/sops "https://github.com/getsops/sops/releases/download/v${SOPS_VERSION}/sops-v${SOPS_VERSION}.linux.amd64" && \
   chmod +x /usr/bin/sops && \
   :
 
