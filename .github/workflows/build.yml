@@ -33,7 +33,7 @@ jobs:
           chmod: 0755
 
       - name: Run pre-commit hooks
-        uses: nikaro/actions/pre-commit@fbd9437083a50b65e0243a96b0def467bde4045b # 1.2.7
+        uses: nikaro/actions/pre-commit@bab337bd5f41b4afb911227487102287d9d5162a # 1.3.2
 
   build:
     name: Build
