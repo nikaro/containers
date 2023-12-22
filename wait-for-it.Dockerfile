@@ -1,4 +1,4 @@
-FROM debian:12.2-slim
+FROM debian:12.4-slim
 
 LABEL org.opencontainers.image.authors="nikaro"
 LABEL org.opencontainers.image.url="https://github.com/nikaro/containers"
