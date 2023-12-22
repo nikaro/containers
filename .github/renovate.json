@@ -5,6 +5,10 @@
     {
       "groupName": "alpine packages",
       "matchFileNames": ["alpine-devcontainer.Dockerfile"]
+    },
+    {
+      "matchPackageNames": ["python"],
+      "allowedVersions": "<=3.11"
     }
   ]
 }
