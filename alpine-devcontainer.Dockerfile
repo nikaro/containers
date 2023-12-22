@@ -21,7 +21,7 @@ ENV HELIX_VERSION="23.10-r0"
 # renovate: datasource=repology depName=alpine_3_19/jq versioning=loose
 ENV JQ_VERSION="1.7.1-r0"
 # renovate: datasource=repology depName=alpine_3_19/openssh versioning=loose
-ENV OPENSSH_CLIENT_VERSION="9.5_p1-r0"
+ENV OPENSSH_CLIENT_VERSION="9.6_p1-r0"
 # renovate: datasource=repology depName=alpine_3_19/ripgrep versioning=loose
 ENV RIPGREP_VERSION="14.0.3-r0"
 
