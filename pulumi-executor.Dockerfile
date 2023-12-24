@@ -9,7 +9,7 @@ ENV BUILD_ESSENTIALS_VERSION="12.9"
 # renovate: datasource=repology depName=ca-certificates packageName=debian_12/ca-certificates versioning=loose
 ENV CA_CERTIFICATES_VERSION="20230311"
 # renovate: datasource=repology depName=curl packageName=debian_12/curl versioning=loose
-ENV CURL_VERSION="7.88.1-10+deb12u4"
+ENV CURL_VERSION="7.88.1-10+deb12u5"
 # renovate: datasource=repology depName=git packageName=debian_12/git versioning=loose
 ENV GIT_VERSION="1:2.39.2-1.1"
 # renovate: datasource=pypi depName=pulumi
