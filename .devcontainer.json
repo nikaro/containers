@@ -1,15 +1,24 @@
 {
-  "customizations": {
-    "vscode": {
-      "extensions": ["EditorConfig.EditorConfig", "GitHub.copilot"]
-    }
-  },
+  "name": "containers",
+  "image": "ghcr.io/nikaro/debian-devcontainer:latest",
   "features": {
     "ghcr.io/nikaro/features/actionlint": {},
     "ghcr.io/nikaro/features/github-cli": {},
-    "ghcr.io/nikaro/features/hadolint": {}
+    "ghcr.io/nikaro/features/hadolint": {},
+    "ghcr.io/nikaro/features/pre-commit": {}
   },
-  "image": "rg.fr-par.scw.cloud/devc/alpine:latest",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "EditorConfig.EditorConfig",
+        "esbenp.prettier-vscode",
+        "GitHub.copilot",
+        "GitHub.vscode-github-actions",
+        "ms-azuretools.vscode-docker",
+        "redhat.vscode-yaml"
+      ]
+    }
+  },
   "mounts": [
     {
       "source": "${localEnv:HOME}/.config/fish",
@@ -20,17 +29,6 @@
       "source": "${localEnv:HOME}/.config/git",
       "target": "/home/vscode/.config/git",
       "type": "bind"
-    },
-    {
-      "source": "${localEnv:HOME}/.config/gh",
-      "target": "/home/vscode/.config/gh",
-      "type": "bind"
-    },
-    {
-      "source": "${localEnv:HOME}/.ssh",
-      "target": "/home/vscode/.ssh",
-      "type": "bind"
     }
-  ],
-  "name": "containers"
+  ]
 }

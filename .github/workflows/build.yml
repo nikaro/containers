@@ -51,6 +51,12 @@ jobs:
               host: ghcr.io
               username: nikaro
               password: GITHUB_TOKEN
+          - file: debian-devcontainer
+            name: ${{ github.repository_owner }}/debian-devcontainer
+            registry:
+              host: ghcr.io
+              username: nikaro
+              password: GITHUB_TOKEN
           - file: pulumi-executor
             name: ${{ github.repository_owner }}/pulumi-executor
             registry:

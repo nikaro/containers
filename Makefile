@@ -15,9 +15,10 @@ login:
 	docker login ${registry} -u nologin --password-stdin <<< "${SCW_SECRET_KEY}"
 
 build:
-	# docker build --tag ${registry}/alpine:${tag} --tag ${registry}/alpine:latest --file ./alpine-devcontainer.Dockerfile .
+	docker build --tag ${registry}/debian-devcontainer:${tag} --tag ${registry}/debian-devcontainer:latest --file ./debian-devcontainer.Dockerfile .
+	# docker build --tag ${registry}/alpine-devcontainer:${tag} --tag ${registry}/alpine-devcontainer:latest --file ./alpine-devcontainer.Dockerfile .
 	# docker build --tag ${registry}/wait-for-it:${tag} --tag ${registry}/wait-for-it:latest --file ./wait-for-it.Dockerfile .
-	docker build --tag ${registry}/pulumi-executor:${tag} --tag ${registry}/pulumi-executor:latest --file ./pulumi-executor.Dockerfile .
+	# docker build --tag ${registry}/pulumi-executor:${tag} --tag ${registry}/pulumi-executor:latest --file ./pulumi-executor.Dockerfile .
 
 push:
 	docker push --all-tags ${image}
