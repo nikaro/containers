@@ -16,6 +16,8 @@ ENV FD_VERSION="8.6.0-3"
 ENV FISH_VERSION="3.6.0-3.1"
 # renovate: datasource=repology depName=git packageName=debian_12/git versioning=loose
 ENV GIT_VERSION="1:2.39.2-1.1"
+# renovate: datasource=repology depName=jq packageName=debian_12/jq versioning=loose
+ENV JQ_VERSION="1.6-2.1"
 # renovate: datasource=repology depName=openssh packageName=debian_12/openssh-client versioning=loose
 ENV OPENSSH_VERSION="1:9.2p1-2+deb12u2"
 # renovate: datasource=repology depName=ripgrep packageName=debian_12/ripgrep versioning=loose
@@ -34,6 +36,7 @@ RUN \
     "fd-find=${FD_VERSION}" \
     "fish=${FISH_VERSION}" \
     "git=${GIT_VERSION}" \
+    "jq=${JQ_VERSION}" \
     "openssh-client=${OPENSSH_VERSION}" \
     "ripgrep=${RIPGREP_VERSION}" \
     "sudo=${SUDO_VERSION}" \
