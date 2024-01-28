@@ -18,7 +18,7 @@ ENV FISH_VERSION="3.6.0-3.1"
 ENV GIT_VERSION="1:2.39.2-1.1"
 # renovate: datasource=repology depName=jq packageName=debian_12/jq versioning=loose
 ENV JQ_VERSION="1.6-2.1"
-# renovate: datasource=repology depName=openssh packageName=debian_12/openssh-client versioning=loose
+# renovate: datasource=repology depName=openssh packageName=debian_12/openssh versioning=loose
 ENV OPENSSH_VERSION="1:9.2p1-2+deb12u2"
 # renovate: datasource=repology depName=ripgrep packageName=debian_12/ripgrep versioning=loose
 ENV RIPGREP_VERSION="13.0.0-4+b2"
