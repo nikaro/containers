@@ -1,4 +1,4 @@
-FROM alpine:3.19.0
+FROM alpine:3.19.1
 
 LABEL org.opencontainers.image.authors="nikaro"
 LABEL org.opencontainers.image.url="https://github.com/nikaro/containers"
