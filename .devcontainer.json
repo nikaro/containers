@@ -4,9 +4,7 @@
   "features": {
     "ghcr.io/nikaro/features/actionlint": {},
     "ghcr.io/nikaro/features/dind": {},
-    "ghcr.io/nikaro/features/github-cli": {},
-    "ghcr.io/nikaro/features/hadolint": {},
-    "ghcr.io/nikaro/features/pre-commit": {}
+    "ghcr.io/nikaro/features/hadolint": {}
   },
   "customizations": {
     "vscode": {
