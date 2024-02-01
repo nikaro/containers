@@ -1,3 +1,4 @@
+# hadolint ignore=DL3007
 FROM cgr.dev/chainguard/wolfi-base:latest
 
 LABEL org.opencontainers.image.authors="nikaro"
@@ -7,6 +8,7 @@ LABEL org.opencontainers.image.title="wolfi-devcontainer"
 # renovate: datasource=pypi depName=pre-commit
 ENV PRE_COMMIT_VERSION="3.6.0"
 
+# hadolint ignore=DL3018
 RUN \
   apk add --no-cache \
     curl \
