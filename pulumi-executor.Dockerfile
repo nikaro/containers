@@ -13,7 +13,7 @@ ENV CURL_VERSION="7.88.1-10+deb12u5"
 # renovate: datasource=repology depName=git packageName=debian_12/git versioning=loose
 ENV GIT_VERSION="1:2.39.2-1.1"
 # renovate: datasource=pypi depName=pulumi
-ENV PULUMI_VERSION="3.103.1"
+ENV PULUMI_VERSION="3.104.2"
 # renovate: datasource=github-releases depName=sops packageName=getsops/sops
 ENV SOPS_VERSION="3.8.1"
 
