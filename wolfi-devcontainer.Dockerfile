@@ -11,14 +11,17 @@ ENV PRE_COMMIT_VERSION="3.6.0"
 # hadolint ignore=DL3018
 RUN \
   apk add --no-cache \
+    build-base \
     curl \
     fd \
+    fish \
     git \
     jq \
-    make \
+    openssh-client \
     python3 \
     ripgrep \
     sudo-rs \
+    vim \
   && \
   mkdir -p /usr/local/bin && \
   curl -L \
