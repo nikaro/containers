@@ -18,6 +18,8 @@ ENV FISH_VERSION="3.6.0-3.1"
 ENV GIT_VERSION="1:2.39.2-1.1"
 # renovate: datasource=repology depName=jq packageName=debian_12/jq versioning=loose
 ENV JQ_VERSION="1.6-2.1"
+# renovate: datasource=repology depName=openssh packageName=debian_12/openssh versioning=loose
+ENV OPENSSH_VERSION="1:9.2p1-2+deb12u2"
 # renovate: datasource=pypi depName=pre-commit
 ENV PRE_COMMIT_VERSION="3.6.0"
 # renovate: datasource=repology depName=python3 packageName=debian_12/python3 versioning=loose
@@ -26,6 +28,8 @@ ENV PYTHON_VERSION="3.11.2-1+b1"
 ENV RIPGREP_VERSION="13.0.0-4+b2"
 # renovate: datasource=repology depName=sudo packageName=debian_12/sudo versioning=loose
 ENV SUDO_VERSION="1.9.13p3-1+deb12u1"
+# renovate: datasource=repology depName=vim packageName=debian_12/vim versioning=loose
+ENV VIM_VERSION="2:9.0.1378-2"
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 RUN \
@@ -39,9 +43,11 @@ RUN \
     "fish=${FISH_VERSION}" \
     "git=${GIT_VERSION}" \
     "jq=${JQ_VERSION}" \
+    "openssh-client=${OPENSSH_VERSION}" \
     "python3-minimal=${PYTHON_VERSION}" \
     "ripgrep=${RIPGREP_VERSION}" \
     "sudo=${SUDO_VERSION}" \
+    "vim=${VIM_VERSION}" \
     && \
   rm -rf /var/lib/apt/lists/* && \
   curl -L \
