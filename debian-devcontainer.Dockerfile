@@ -13,7 +13,7 @@ ENV CURL_VERSION="7.88.1-10+deb12u5"
 # renovate: datasource=repology depName=fd packageName=debian_12/fd-find versioning=loose
 ENV FD_VERSION="8.6.0-3"
 # renovate: datasource=repology depName=fish packageName=debian_12/fish versioning=loose
-ENV FISH_VERSION="3.6.0-3.1"
+ENV FISH_VERSION="3.6.0-3.1+deb12u1"
 # renovate: datasource=repology depName=git packageName=debian_12/git versioning=loose
 ENV GIT_VERSION="1:2.39.2-1.1"
 # renovate: datasource=repology depName=jq packageName=debian_12/jq versioning=loose
