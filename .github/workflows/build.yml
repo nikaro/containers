@@ -23,7 +23,7 @@ jobs:
         uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
 
       - name: Install hadolint
-        uses: jaxxstorm/action-install-gh-release@c5ead9a448b4660cf1e7866ee22e4dc56538031a # v1.10.0
+        uses: jaxxstorm/action-install-gh-release@71d17cb091aa850acb2a1a4cf87258d183eb941b # v1.11.0
         with:
           repo: hadolint/hadolint
           tag: ${{ env.HADOLINT_VERSION }}
@@ -33,7 +33,7 @@ jobs:
           chmod: 0755
 
       - name: Run pre-commit hooks
-        uses: nikaro/actions/pre-commit@e279a865c36407ae0b95bcce39e8449084736092 # 1.3.13
+        uses: nikaro/actions/pre-commit@d1fe8dcfff16c05b1fddc0e3f3945d4c0e9f5d68 # 1.3.14
 
   build:
     name: Build
