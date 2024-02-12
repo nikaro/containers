@@ -26,6 +26,8 @@ ENV PYTHON_VERSION="3.11.6-r1"
 ENV RIPGREP_VERSION="14.0.3-r0"
 # renovate: datasource=repology depName=alpine_3_19/sudo versioning=loose
 ENV SUDO_VERSION="1.9.15_p2-r0"
+# renovate: datasource=repology depName=alpine_3_19/unzip versioning=loose
+ENV UNZIP_VERSION="6.0-r14"
 # renovate: datasource=repology depName=alpine_3_19/vim versioning=loose
 ENV VIM_VERSION="9.0.2127-r0"
 
@@ -41,6 +43,7 @@ RUN \
     "python3=${PYTHON_VERSION}" \
     "ripgrep=${RIPGREP_VERSION}" \
     "sudo=${SUDO_VERSION}" \
+    "unzip=${UNZIP_VERSION}" \
     "vim=${VIM_VERSION}" \
   && \
   curl -L \

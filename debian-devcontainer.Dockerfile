@@ -30,6 +30,8 @@ ENV PYTHON_VERSION="3.11.2-1+b1"
 ENV RIPGREP_VERSION="13.0.0-4+b2"
 # renovate: datasource=repology depName=sudo packageName=debian_12/sudo versioning=loose
 ENV SUDO_VERSION="1.9.13p3-1+deb12u1"
+# renovate: datasource=repology depName=sudo packageName=debian_12/unzip versioning=loose
+ENV UNZIP_VERSION="6.0-28"
 # renovate: datasource=repology depName=vim packageName=debian_12/vim versioning=loose
 ENV VIM_VERSION="2:9.0.1378-2"
 
@@ -50,6 +52,7 @@ RUN \
     "python3-minimal=${PYTHON_VERSION}" \
     "ripgrep=${RIPGREP_VERSION}" \
     "sudo=${SUDO_VERSION}" \
+    "unzip=${UNZIP_VERSION}" \
     "vim=${VIM_VERSION}" \
     && \
   rm -rf /var/lib/apt/lists/* && \

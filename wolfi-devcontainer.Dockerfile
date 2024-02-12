@@ -21,6 +21,7 @@ RUN \
     python3 \
     ripgrep \
     sudo-rs \
+    unzip \
     vim \
   && \
   mkdir -p /usr/local/bin && \
