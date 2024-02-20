@@ -19,9 +19,9 @@ ENV JQ_VERSION="1.7.1-r0"
 # renovate: datasource=repology depName=openssh packageName=debian_12/openssh versioning=loose
 ENV OPENSSH_VERSION="9.6_p1-r0"
 # renovate: datasource=pypi depName=pre-commit
-ENV PRE_COMMIT_VERSION="3.6.1"
+ENV PRE_COMMIT_VERSION="3.6.2"
 # renovate: datasource=repology depName=alpine_3_19/python3 versioning=loose
-ENV PYTHON_VERSION="3.11.6-r1"
+ENV PYTHON_VERSION="3.11.8-r0"
 # renovate: datasource=repology depName=alpine_3_19/ripgrep versioning=loose
 ENV RIPGREP_VERSION="14.0.3-r0"
 # renovate: datasource=repology depName=alpine_3_19/sudo versioning=loose
