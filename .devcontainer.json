@@ -2,20 +2,9 @@
   "name": "containers",
   "image": "ghcr.io/nikaro/debian-devcontainer:latest",
   "features": {
+    "ghcr.io/nikaro/features/base": {},
     "ghcr.io/nikaro/features/actionlint": {},
     "ghcr.io/nikaro/features/dind": {},
     "ghcr.io/nikaro/features/hadolint": {}
-  },
-  "customizations": {
-    "vscode": {
-      "extensions": [
-        "EditorConfig.EditorConfig",
-        "esbenp.prettier-vscode",
-        "GitHub.copilot",
-        "GitHub.vscode-github-actions",
-        "ms-azuretools.vscode-docker",
-        "redhat.vscode-yaml"
-      ]
-    }
   }
 }
