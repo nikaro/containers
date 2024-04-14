@@ -21,7 +21,7 @@ ENV OPENSSH_VERSION="9.6_p1-r0"
 # renovate: datasource=pypi depName=pre-commit
 ENV PRE_COMMIT_VERSION="3.7.0"
 # renovate: datasource=repology depName=alpine_3_19/python3 versioning=loose
-ENV PYTHON_VERSION="3.11.8-r0"
+ENV PYTHON_VERSION="3.11.9-r0"
 # renovate: datasource=repology depName=alpine_3_19/ripgrep versioning=loose
 ENV RIPGREP_VERSION="14.0.3-r0"
 # renovate: datasource=repology depName=alpine_3_19/sudo versioning=loose
