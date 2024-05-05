@@ -19,7 +19,7 @@ ENV GIT_VERSION="1:2.39.2-1.1"
 # renovate: datasource=repology depName=jq packageName=debian_12/jq versioning=loose
 ENV JQ_VERSION="1.6-2.1"
 # renovate: datasource=repology depName=less packageName=debian_12/less versioning=loose
-ENV LESS_VERSION="590-2"
+ENV LESS_VERSION="590-2.1~deb12u2"
 # renovate: datasource=repology depName=locales packageName=debian_12/glibc versioning=loose
 ENV LOCALES_VERSION="2.36-9+deb12u7"
 # renovate: datasource=repology depName=openssh packageName=debian_12/openssh versioning=loose
