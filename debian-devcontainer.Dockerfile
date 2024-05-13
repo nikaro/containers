@@ -25,7 +25,7 @@ ENV LOCALES_VERSION="2.36-9+deb12u7"
 # renovate: datasource=repology depName=openssh packageName=debian_12/openssh versioning=loose
 ENV OPENSSH_VERSION="1:9.2p1-2+deb12u2"
 # renovate: datasource=pypi depName=pre-commit
-ENV PRE_COMMIT_VERSION="3.7.0"
+ENV PRE_COMMIT_VERSION="3.7.1"
 # renovate: datasource=repology depName=python3 packageName=debian_12/python3 versioning=loose
 ENV PYTHON_VERSION="3.11.2-1+b1"
 # renovate: datasource=repology depName=ripgrep packageName=debian_12/ripgrep versioning=loose
