@@ -6,7 +6,7 @@ LABEL org.opencontainers.image.url="https://github.com/nikaro/containers"
 LABEL org.opencontainers.image.title="wolfi-devcontainer"
 
 # renovate: datasource=pypi depName=pre-commit
-ENV PRE_COMMIT_VERSION="3.7.0"
+ENV PRE_COMMIT_VERSION="3.7.1"
 
 # hadolint ignore=DL3018
 RUN \
