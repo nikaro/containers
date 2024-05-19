@@ -13,7 +13,7 @@ ENV FD_VERSION="8.7.1-r0"
 # renovate: datasource=repology depName=alpine_3_19/fish versioning=loose
 ENV FISH_VERSION="3.6.3-r0"
 # renovate: datasource=repology depName=alpine_3_19/git versioning=loose
-ENV GIT_VERSION="2.43.0-r0"
+ENV GIT_VERSION="2.43.4-r0"
 # renovate: datasource=repology depName=alpine_3_19/jq versioning=loose
 ENV JQ_VERSION="1.7.1-r0"
 # renovate: datasource=repology depName=openssh packageName=debian_12/openssh versioning=loose
