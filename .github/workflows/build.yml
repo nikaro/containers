@@ -5,12 +5,8 @@ on:
   push:
     branches: [main]
   schedule:
-    - cron: "0 0 * * 0"
+    - cron: "0 0 * * 3"
   workflow_dispatch:
-
-env:
-  # renovate: datasource=github-releases depName=hadolint/hadolint
-  HADOLINT_VERSION: v2.12.0
 
 jobs:
   lint:
@@ -26,7 +22,6 @@ jobs:
         uses: jaxxstorm/action-install-gh-release@25d5e2dd555cd74f1fab9ac1e6ea117acde2c0c4 # v1.12.0
         with:
           repo: hadolint/hadolint
-          tag: ${{ env.HADOLINT_VERSION }}
           cache: enable
           extension-matching: disable
           rename-to: hadolint
@@ -45,36 +40,11 @@ jobs:
     strategy:
       matrix:
         image:
-          - file: alpine-devcontainer
-            name: ${{ github.repository_owner }}/alpine-devcontainer
-            registry:
-              host: ghcr.io
-              username: nikaro
-              password: GITHUB_TOKEN
-          - file: debian-devcontainer
-            name: ${{ github.repository_owner }}/debian-devcontainer
-            registry:
-              host: ghcr.io
-              username: nikaro
-              password: GITHUB_TOKEN
-          - file: pulumi-executor
-            name: ${{ github.repository_owner }}/pulumi-executor
-            registry:
-              host: ghcr.io
-              username: nikaro
-              password: GITHUB_TOKEN
-          - file: wait-for-it
-            name: ${{ github.repository_owner }}/wait-for-it
-            registry:
-              host: ghcr.io
-              username: nikaro
-              password: GITHUB_TOKEN
-          - file: wolfi-devcontainer
-            name: ${{ github.repository_owner }}/wolfi-devcontainer
-            registry:
-              host: ghcr.io
-              username: nikaro
-              password: GITHUB_TOKEN
+          - name: alpine-devcontainer
+          - name: debian-devcontainer
+          - name: pulumi-executor
+          - name: wait-for-it
+          - name: wolfi-devcontainer
     steps:
       - name: Checkout repository
         uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29 # v4.1.6
@@ -89,15 +59,15 @@ jobs:
         if: github.ref_name == 'main'
         uses: docker/login-action@e92390c5fb421da1463c202d546fed0ec5c39f20 # v3.1.0
         with:
-          registry: ${{ matrix.image.registry.host }}
-          username: ${{ matrix.image.registry.username }}
-          password: ${{ secrets[matrix.image.registry.password] }}
+          registry: ghcr.io
+          username: ${{ github.repository_owner }}
+          password: ${{ github.token }}
 
       - name: Build and push
         uses: docker/build-push-action@2cdde995de11925a030ce8070c3d77a52ffcf1c0 # v5.3.0
         with:
           context: .
-          file: ./${{ matrix.image.file }}.Dockerfile
+          file: ./${{ matrix.image.name }}.Dockerfile
           platforms: linux/amd64,linux/arm64
           push: ${{ github.ref_name == 'main' }}
-          tags: ${{ matrix.image.registry.host }}/${{ matrix.image.name }}:latest
+          tags: ghcr.io/${{ github.repository_owner }}/${{ matrix.image.name }}:latest
