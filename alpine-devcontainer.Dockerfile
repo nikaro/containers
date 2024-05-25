@@ -4,31 +4,31 @@ LABEL org.opencontainers.image.authors="nikaro"
 LABEL org.opencontainers.image.url="https://github.com/nikaro/containers"
 LABEL org.opencontainers.image.title="alpine-devcontainer"
 
-# renovate: datasource=repology depName=alpine_3_19/build-base versioning=loose
+# renovate: datasource=repology depName=alpine_3_20/build-base versioning=loose
 ENV BUILD_BASE_VERSION="0.5-r3"
-# renovate: datasource=repology depName=alpine_3_19/curl versioning=loose
+# renovate: datasource=repology depName=alpine_3_20/curl versioning=loose
 ENV CURL_VERSION="8.5.0-r0"
-# renovate: datasource=repology depName=alpine_3_19/fd versioning=loose
+# renovate: datasource=repology depName=alpine_3_20/fd versioning=loose
 ENV FD_VERSION="8.7.1-r0"
-# renovate: datasource=repology depName=alpine_3_19/fish versioning=loose
+# renovate: datasource=repology depName=alpine_3_20/fish versioning=loose
 ENV FISH_VERSION="3.6.3-r0"
-# renovate: datasource=repology depName=alpine_3_19/git versioning=loose
+# renovate: datasource=repology depName=alpine_3_20/git versioning=loose
 ENV GIT_VERSION="2.43.4-r0"
-# renovate: datasource=repology depName=alpine_3_19/jq versioning=loose
+# renovate: datasource=repology depName=alpine_3_20/jq versioning=loose
 ENV JQ_VERSION="1.7.1-r0"
 # renovate: datasource=repology depName=openssh packageName=debian_12/openssh versioning=loose
 ENV OPENSSH_VERSION="9.6_p1-r0"
 # renovate: datasource=pypi depName=pre-commit
 ENV PRE_COMMIT_VERSION="3.7.1"
-# renovate: datasource=repology depName=alpine_3_19/python3 versioning=loose
+# renovate: datasource=repology depName=alpine_3_20/python3 versioning=loose
 ENV PYTHON_VERSION="3.11.9-r0"
-# renovate: datasource=repology depName=alpine_3_19/ripgrep versioning=loose
+# renovate: datasource=repology depName=alpine_3_20/ripgrep versioning=loose
 ENV RIPGREP_VERSION="14.0.3-r0"
-# renovate: datasource=repology depName=alpine_3_19/sudo versioning=loose
+# renovate: datasource=repology depName=alpine_3_20/sudo versioning=loose
 ENV SUDO_VERSION="1.9.15_p2-r0"
-# renovate: datasource=repology depName=alpine_3_19/unzip versioning=loose
+# renovate: datasource=repology depName=alpine_3_20/unzip versioning=loose
 ENV UNZIP_VERSION="6.0-r14"
-# renovate: datasource=repology depName=alpine_3_19/vim versioning=loose
+# renovate: datasource=repology depName=alpine_3_20/vim versioning=loose
 ENV VIM_VERSION="9.0.2127-r0"
 
 RUN \
