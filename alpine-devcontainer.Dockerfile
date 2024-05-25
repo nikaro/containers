@@ -7,29 +7,29 @@ LABEL org.opencontainers.image.title="alpine-devcontainer"
 # renovate: datasource=repology depName=build-base packageName=alpine_3_20/build-base versioning=loose
 ENV BUILD_BASE_VERSION="0.5-r3"
 # renovate: datasource=repology depName=curl packageName=alpine_3_20/curl versioning=loose
-ENV CURL_VERSION="8.5.0-r0"
+ENV CURL_VERSION="8.7.1-r0"
 # renovate: datasource=repology depName=fd packageName=alpine_3_20/fd versioning=loose
-ENV FD_VERSION="8.7.1-r0"
+ENV FD_VERSION="10.0.0-r0"
 # renovate: datasource=repology depName=fish packageName=alpine_3_20/fish versioning=loose
-ENV FISH_VERSION="3.6.3-r0"
+ENV FISH_VERSION="3.7.1-r0"
 # renovate: datasource=repology depName=git packageName=alpine_3_20/git versioning=loose
-ENV GIT_VERSION="2.43.4-r0"
+ENV GIT_VERSION="2.45.1-r0"
 # renovate: datasource=repology depName=jq packageName=alpine_3_20/jq versioning=loose
 ENV JQ_VERSION="1.7.1-r0"
 # renovate: datasource=repology depName=openssh packageName=alpine_3_20/openssh versioning=loose
-ENV OPENSSH_VERSION="9.6_p1-r0"
+ENV OPENSSH_VERSION="9.7_p1-r3"
 # renovate: datasource=pypi depName=pre-commit
 ENV PRE_COMMIT_VERSION="3.7.1"
 # renovate: datasource=repology depName=python3 packageName=alpine_3_20/python3 versioning=loose
-ENV PYTHON_VERSION="3.11.9-r0"
+ENV PYTHON_VERSION="3.12.3-r1"
 # renovate: datasource=repology depName=ripgrep packageName=alpine_3_20/ripgrep versioning=loose
-ENV RIPGREP_VERSION="14.0.3-r0"
+ENV RIPGREP_VERSION="14.1.0-r0"
 # renovate: datasource=repology depName=sudo packageName=alpine_3_20/sudo versioning=loose
-ENV SUDO_VERSION="1.9.15_p2-r0"
+ENV SUDO_VERSION="1.9.15_p5-r0"
 # renovate: datasource=repology depName=unzip packageName=alpine_3_20/unzip versioning=loose
 ENV UNZIP_VERSION="6.0-r14"
 # renovate: datasource=repology depName=vim packageName=alpine_3_20/vim versioning=loose
-ENV VIM_VERSION="9.0.2127-r0"
+ENV VIM_VERSION="9.1.0414-r0"
 
 RUN \
   apk add --no-cache \
