@@ -42,9 +42,7 @@ jobs:
         image:
           - name: alpine-devcontainer
           - name: debian-devcontainer
-          - name: pulumi-executor
           - name: wait-for-it
-          - name: wolfi-devcontainer
     steps:
       - name: Checkout repository
         uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29 # v4.1.6
