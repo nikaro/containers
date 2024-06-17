@@ -16,7 +16,7 @@ jobs:
       contents: read
     steps:
       - name: Checkout repository
-        uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29 # v4.1.6
+        uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
 
       - name: Install hadolint
         uses: jaxxstorm/action-install-gh-release@25d5e2dd555cd74f1fab9ac1e6ea117acde2c0c4 # v1.12.0
@@ -28,7 +28,7 @@ jobs:
           chmod: 0755
 
       - name: Run pre-commit hooks
-        uses: nikaro/actions/pre-commit@778344cb9ff71fc2237011ac731622e1da3a109a # 1.6.4
+        uses: nikaro/actions/pre-commit@85fba2827584648c6e8423feb04fc111cffb0f66 # 1.6.5
         with:
           python-version: 3.x
 
@@ -47,7 +47,7 @@ jobs:
           - name: wait-for-it
     steps:
       - name: Checkout repository
-        uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29 # v4.1.6
+        uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
 
       - name: Setup QEMU
         uses: docker/setup-qemu-action@68827325e0b33c7199eb31dd4e31fbe9023e06e3 # v3.0.0
