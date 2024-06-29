@@ -7,7 +7,7 @@ LABEL org.opencontainers.image.title="alpine-devcontainer"
 # renovate: datasource=repology depName=build-base packageName=alpine_3_20/build-base versioning=loose
 ENV BUILD_BASE_VERSION="0.5-r3"
 # renovate: datasource=repology depName=curl packageName=alpine_3_20/curl versioning=loose
-ENV CURL_VERSION="8.7.1-r0"
+ENV CURL_VERSION="8.8.0-r0"
 # renovate: datasource=repology depName=fd packageName=alpine_3_20/fd versioning=loose
 ENV FD_VERSION="10.0.0-r0"
 # renovate: datasource=repology depName=fish packageName=alpine_3_20/fish versioning=loose
