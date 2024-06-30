@@ -9,7 +9,7 @@ ENV BUILD_ESSENTIALS_VERSION="12.9"
 # renovate: datasource=repology depName=ca-certificates packageName=debian_12/ca-certificates versioning=loose
 ENV CA_CERTIFICATES_VERSION="20230311"
 # renovate: datasource=repology depName=curl packageName=debian_12/curl versioning=loose
-ENV CURL_VERSION="7.88.1-10+deb12u5"
+ENV CURL_VERSION="7.88.1-10+deb12u6"
 # renovate: datasource=repology depName=fd packageName=debian_12/fd-find versioning=loose
 ENV FD_VERSION="8.6.0-3"
 # renovate: datasource=repology depName=fish packageName=debian_12/fish versioning=loose
