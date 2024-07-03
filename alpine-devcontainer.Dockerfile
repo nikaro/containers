@@ -17,7 +17,7 @@ ENV GIT_VERSION="2.45.2-r0"
 # renovate: datasource=repology depName=jq packageName=alpine_3_20/jq versioning=loose
 ENV JQ_VERSION="1.7.1-r0"
 # renovate: datasource=repology depName=openssh packageName=alpine_3_20/openssh versioning=loose
-ENV OPENSSH_VERSION="9.7_p1-r3"
+ENV OPENSSH_VERSION="9.7_p1-r4"
 # renovate: datasource=pypi depName=pre-commit
 ENV PRE_COMMIT_VERSION="3.7.1"
 # renovate: datasource=repology depName=python3 packageName=alpine_3_20/python3 versioning=loose
