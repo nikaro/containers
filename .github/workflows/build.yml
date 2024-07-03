@@ -28,7 +28,7 @@ jobs:
           chmod: 0755
 
       - name: Run pre-commit hooks
-        uses: nikaro/actions/pre-commit@85fba2827584648c6e8423feb04fc111cffb0f66 # 1.6.5
+        uses: nikaro/actions/pre-commit@09f4303c25301bd9306525d3989a9f0ed938ad2f # 1.6.6
         with:
           python-version: 3.x
 
@@ -64,7 +64,7 @@ jobs:
           password: ${{ github.token }}
 
       - name: Build and push
-        uses: docker/build-push-action@15560696de535e4014efeff63c48f16952e52dd1 # v6.2.0
+        uses: docker/build-push-action@1a162644f9a7e87d8f4b053101d1d9a712edc18c # v6.3.0
         with:
           context: .
           file: ./${{ matrix.image.name }}.Dockerfile
