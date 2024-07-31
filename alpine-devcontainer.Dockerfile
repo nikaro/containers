@@ -1,4 +1,4 @@
-FROM alpine:3.20.1
+FROM alpine:3.20.2
 
 LABEL org.opencontainers.image.authors="nikaro"
 LABEL org.opencontainers.image.url="https://github.com/nikaro/containers"
@@ -7,7 +7,7 @@ LABEL org.opencontainers.image.title="alpine-devcontainer"
 # renovate: datasource=repology depName=build-base packageName=alpine_3_20/build-base versioning=loose
 ENV BUILD_BASE_VERSION="0.5-r3"
 # renovate: datasource=repology depName=curl packageName=alpine_3_20/curl versioning=loose
-ENV CURL_VERSION="8.8.0-r0"
+ENV CURL_VERSION="8.9.0-r0"
 # renovate: datasource=repology depName=fd packageName=alpine_3_20/fd versioning=loose
 ENV FD_VERSION="10.0.0-r0"
 # renovate: datasource=repology depName=fish packageName=alpine_3_20/fish versioning=loose
@@ -19,7 +19,7 @@ ENV JQ_VERSION="1.7.1-r0"
 # renovate: datasource=repology depName=openssh packageName=alpine_3_20/openssh versioning=loose
 ENV OPENSSH_VERSION="9.7_p1-r4"
 # renovate: datasource=pypi depName=pre-commit
-ENV PRE_COMMIT_VERSION="3.7.1"
+ENV PRE_COMMIT_VERSION="3.8.0"
 # renovate: datasource=repology depName=python3 packageName=alpine_3_20/python3 versioning=loose
 ENV PYTHON_VERSION="3.12.3-r1"
 # renovate: datasource=repology depName=ripgrep packageName=alpine_3_20/ripgrep versioning=loose
