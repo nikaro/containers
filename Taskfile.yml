@@ -1,0 +1,61 @@
+version: '3'
+
+set: [errexit, nounset, pipefail]
+shopt: [globstar]
+
+includes:
+  lint:
+    taskfile: https://github.com/nikaro/meta/raw/main/taskfiles/lint.yml
+    internal: true
+  format:
+    taskfile: https://github.com/nikaro/meta/raw/main/taskfiles/format.yml
+    internal: true
+
+tasks:
+  default:
+    - task: build
+
+  init:
+    desc: Initialize repositry
+    cmds:
+      - git config core.hooksPath .githooks
+      - git config commit.template .gitmessage
+
+  lint:
+    desc: Run linters
+    cmds:
+      - task: lint:default
+      - task: lint:dockerfile
+
+  lint:dockerfile:
+    desc: Lint Dockerfiles
+    sources:
+      - ./*Dockerfile
+    cmd:
+      for: sources
+      cmd: hadolint {{.ITEM}}
+
+  format:
+    desc: Run formatters
+    cmds:
+      - task: format:default
+
+  build:
+    desc: Build container images
+    vars:
+      REGISTRY: ghcr.io/nikaro
+      TAG:
+        sh: git rev-parse --short HEAD
+    sources:
+      - ./*Dockerfile
+    cmd:
+      for: sources
+      cmd: |-
+        docker build \
+          --tag {{.REGISTRY}}/{{splitList "." .ITEM | first}}:{{.TAG}} \
+          --tag {{.REGISTRY}}/{{splitList "." .ITEM | first}}:latest \
+          --file {{.ITEM}}
+
+  clean:
+    desc: Cleanup container images
+    cmd: docker system prune --all --filter="label=org.opencontainers.image.url=https://github.com/nikaro/containers" --force
