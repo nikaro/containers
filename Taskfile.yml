@@ -54,7 +54,8 @@ tasks:
         docker build \
           --tag {{.REGISTRY}}/{{splitList "." .ITEM | first}}:{{.TAG}} \
           --tag {{.REGISTRY}}/{{splitList "." .ITEM | first}}:latest \
-          --file {{.ITEM}}
+          --file {{.ITEM}} \
+          .
 
   clean:
     desc: Cleanup container images
