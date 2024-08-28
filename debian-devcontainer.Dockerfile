@@ -29,7 +29,6 @@ RUN \
     vim \
     && \
   rm -rf /var/lib/apt/lists/* && \
-  && \
   :
 
 RUN \
