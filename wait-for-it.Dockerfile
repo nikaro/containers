@@ -1,13 +1,11 @@
-FROM debian:12.6-slim
+FROM debian:testing
 
 LABEL org.opencontainers.image.authors="nikaro"
 LABEL org.opencontainers.image.url="https://github.com/nikaro/containers"
 LABEL org.opencontainers.image.title="wait-for-it"
 
 RUN \
-  apt-get update && \
-  apt-get upgrade --yes && \
-  apt-get install --yes --no-install-recommends \
+  apt-get install --update --yes --no-install-recommends \
     wait-for-it \
     && \
   rm -rf /var/lib/apt/lists/* && \

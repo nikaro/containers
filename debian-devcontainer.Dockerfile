@@ -1,4 +1,4 @@
-FROM debian:12.6-slim
+FROM debian:testing
 
 LABEL org.opencontainers.image.authors="nikaro"
 LABEL org.opencontainers.image.url="https://github.com/nikaro/containers"
@@ -8,11 +8,9 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 RUN \
   echo "en_US.UTF-8 UTF-8" > /etc/locale.gen && \
-  apt-get update && \
-  apt-get upgrade --yes && \
-  apt-get install --yes --no-install-recommends locales && \
+  apt-get install --update --yes --no-install-recommends locales && \
   locale-gen && \
-  apt-get install --yes --no-install-recommends \
+  apt-get install --update --yes --no-install-recommends \
     build-essential \
     ca-certificates \
     curl \
