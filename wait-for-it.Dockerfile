@@ -4,14 +4,11 @@ LABEL org.opencontainers.image.authors="nikaro"
 LABEL org.opencontainers.image.url="https://github.com/nikaro/containers"
 LABEL org.opencontainers.image.title="wait-for-it"
 
-# renovate: datasource=repology depName=debian_12/wait-for-it versioning=loose
-ENV WAIT_FOR_IT_VERSION="0.0~git20180723-1"
-
 RUN \
   apt-get update && \
   apt-get upgrade --yes && \
   apt-get install --yes --no-install-recommends \
-    wait-for-it=${WAIT_FOR_IT_VERSION} \
+    wait-for-it \
     && \
   rm -rf /var/lib/apt/lists/* && \
   groupadd --gid 1000 waitforit && \
