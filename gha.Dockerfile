@@ -37,6 +37,7 @@ RUN brew install \
   fd \
   gh \
   go-task \
+  hadolint \
   jq \
   prettier \
   shellcheck \
