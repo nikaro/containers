@@ -30,8 +30,7 @@ RUN \
 USER nonroot
 
 # Install formulae
-RUN brew install \
-  --verbose \
+RUN brew install --verbose \
   actionlint \
   check-jsonschema \
   fd \
