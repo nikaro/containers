@@ -15,40 +15,12 @@ jobs:
   lint:
     name: Lint
     runs-on: ubuntu-22.04
+    container: ghcr.io/nikaro/gha:latest
     permissions:
       contents: read
     steps:
       - name: Checkout repository
-        uses: actions/checkout@main
-
-      - name: Configure environment for brew
-        shell: bash
-        run: |
-          {
-            echo "HOMEBREW_PREFIX=/home/linuxbrew/.linuxbrew";
-            echo "HOMEBREW_CELLAR=/home/linuxbrew/.linuxbrew/Cellar";
-            echo "HOMEBREW_REPOSITORY=/home/linuxbrew/.linuxbrew/Homebrew";
-          } >> "$GITHUB_ENV"
-          {
-            echo "/home/linuxbrew/.linuxbrew/sbin";
-            echo "/home/linuxbrew/.linuxbrew/bin";
-          } >> "$GITHUB_PATH"
-
-      - name: Install tools
-        shell: bash
-        run: |-
-          brew install \
-            actionlint \
-            check-jsonschema \
-            fd \
-            go-task \
-            hadolint \
-            jq \
-            prettier \
-            shellcheck \
-            shfmt \
-            yamlfmt \
-            yamllint \
+        uses: actions/checkout@v4
 
       - name: Lint
         run: task lint --yes
