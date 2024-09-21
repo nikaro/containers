@@ -12,7 +12,7 @@ ENV HOMEBREW_REPOSITORY=/home/linuxbrew/.linuxbrew/Homebrew
 ENV PATH=/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:$PATH
 
 # Install Homebrew
-ADD --chown=1000:1000 https://github.com/Homebrew/brew.git /home/linuxbrew/.linuxbrew
+ADD --chown=1001:1001 https://github.com/Homebrew/brew.git /home/linuxbrew/.linuxbrew
 RUN \
   apt-get install --update --yes --no-install-recommends \
   build-essential \
@@ -22,9 +22,9 @@ RUN \
   git \
   procps \
   && \
-  groupadd --gid 1000 nonroot && \
-  useradd --uid 1000 --gid 1000 --create-home nonroot && \
-  chown -R 1000:1000 /home/linuxbrew/.linuxbrew/ && \
+  groupadd --gid 1001 nonroot && \
+  useradd --uid 1001 --gid 1001 --create-home nonroot && \
+  chown -R 1001:1001 /home/linuxbrew/.linuxbrew/ && \
   :
 
 USER nonroot
