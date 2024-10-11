@@ -35,6 +35,7 @@ RUN brew install --verbose \
   check-jsonschema \
   fd \
   gh \
+  gnupg \
   go-task \
   hadolint \
   jq \
