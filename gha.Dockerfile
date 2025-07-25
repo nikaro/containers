@@ -39,6 +39,7 @@ RUN brew install --verbose \
   go-task \
   hadolint \
   jq \
+  pre-commit \
   prettier \
   shellcheck \
   shfmt \
